@@ -7,7 +7,7 @@ const MASTER_KEY_FOR_PASSKEY_RESET = '8341339097';
 
 router.post('/seed-default', async (req, res) => {
   try {
-    const { name = 'Vamshi', password = 'Vamshi.c2002', passkey = '2002' } = req.body || {};
+    const { name = 'Vamshi', password = 'Vamshi.c2002', passkey = '2003' } = req.body || {};
     let user = await User.findOne({ name });
     if (user) return res.json({ success: true, message: 'User already exists' });
     const passwordHash = await bcrypt.hash(password, 10);
