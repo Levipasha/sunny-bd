@@ -35,7 +35,7 @@ mongoose.connect(process.env.MONGODB_URI, {
     if (count === 0) {
       const bcrypt = require('bcryptjs');
       const passwordHash = await bcrypt.hash('Vamshi.c2002', 10);
-      await User.create({ name: 'Vamshi', passwordHash, passkey: '2002' });
+      await User.create({ name: 'Vamshi', passwordHash, passkey: '2003' });
       console.log('👤 Seeded default user Vamshi');
     }
   } catch (seedErr) {
